@@ -8,35 +8,37 @@ namespace EVE.Data
 {
     public class Type
     {
-        float capacity { get; set; } = -1f;
-        string description { get; set; } = string.Empty;
-        int group_id { get; set; } = -1;
-        float mass { get; set; } = -1f;
-        string name { get; set; } = string.Empty;
-        float packaged_volume { get; set; } = -1f;
-        int portion_size { get; set; } = -1;
-        bool published { get; set; } = true;
-        float radius { get; set; } = -1f;
-        int id { get; set; } = -1;
-        float volume { get; set; } = -1f;
-        public Type(int id, string name)
+        public float capacity { get; set; }
+        public string description { get; set; }
+        public int group_id { get; set; }
+        public int icon_id { get; set; }
+        public int market_group_id { get; set; }
+        public float mass { get; set; }
+        public string name { get; set; }
+        public float packaged_volume { get; set; }
+        public int portion_size { get; set; }
+        public bool published { get; set; }
+        public float radius { get; set; }
+        public int id { get; set; }
+        public float volume { get; set; }
+        /// <summary>
+        /// FSIIIFSFIBFIF
+        /// </summary>
+        public Type()
         {
+            this.capacity = -1.0f;
+            this.description = string.Empty;
+            this.group_id = -1;
+            this.icon_id = -1;
+            this.market_group_id = -1;
+            this.mass = -1.0f;
+            this.name = string.Empty;
+            this.packaged_volume = -1.0f;
+            this.portion_size = -1;
+            this.published = false;
+            this.radius = -1.0f;
             this.id = id;
-            this.name = name;
-        }
-        public Type(float capacity, string description, int group_id, float mass, string name, float packaged_volume, int portion_size, bool published, float radius, int id, float volume)
-        {
-            this.capacity = capacity;
-            this.description = description;
-            this.group_id = group_id;
-            this.mass = mass;
-            this.name = name;
-            this.packaged_volume = packaged_volume;
-            this.portion_size = portion_size;
-            this.published = published;
-            this.radius = radius;
-            this.id = id;
-            this.volume = volume;
+            this.volume = -1.0f;
         }
     }
 }
